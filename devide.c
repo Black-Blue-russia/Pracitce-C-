@@ -1,32 +1,33 @@
 #include<stdio.h>
 void _1(int n){
-    printf("\nUnit 1 - %d",n);
+    printf("\nКоличество единиц - %d",n);
 }
 void _10(int n){
-    printf("\nunit 10 - %d", n/10);
-    printf("\nunit 1 - %d", n % 10);
+    printf("\nКоличество единиц - %d", n % 10);
+    printf("\nКоличество десятков - %d", n/10);
 }
 void _100(int n){
-    printf("\nunit 100 - %d", n/100);
     _10(n%100);
+    printf("\nКоличество сотен - %d", n/100);
 
 }
 void _1000(int n){
-    printf("\nunit 1000 - %d", n/1000);
     _100(n%1000);
+    printf("\nКоличество тысяч - %d", n/1000);
 }
 void _10000(int n){
-    printf("\nunit 10000 - %d", n/10000);
     _1000(n%10000);
+    printf("\nКоличество десятков тысяч - %d", n/10000);
 }
 void _100000(int n){
-    printf("\nunit 100000 - %d", n/100000);
     _10000(n%100000);
+    printf("\nКоличество сотен тысыч - %d", n/100000);
 }
 void devide(){
     int n;
+    printf("Введите число - ");
     scanf("%d", &n);
-    printf("%d", n);
+    printf("Исходное число - %d", n);
     if (n<10)
         _1(n);
     if (10<= n && n < 100)

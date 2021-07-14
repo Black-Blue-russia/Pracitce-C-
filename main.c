@@ -12,6 +12,6 @@ void sort();
 void test();
 int main(){
     //system("chcp 1251");
-    test();
+    devide();
     return 0;
-};  
+};

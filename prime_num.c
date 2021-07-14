@@ -10,14 +10,17 @@ int check_prime(int a)
         for (int j=2; j<=a/2; j++)
         {
             if (a % j == 0 )
+            {
                 n = 0;
+                break;
                 //printf("not");
+            }
         }
     }
     return n;
 }
 
-void sinmple_number(){
+/*void sinmple_number(){
     int a[20];
     int f = 0;
     for (int i=0; i<5; i++)
@@ -38,3 +41,4 @@ void sinmple_number(){
     }
     printf(" %d ", f);
 }
+*/
