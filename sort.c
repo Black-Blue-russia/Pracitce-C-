@@ -14,15 +14,15 @@ void sort() {
     printf("Исходный массив - ");
 	for (int i =  0; i < N; i++)
 	    printf(" %d ", a[i]);
-    for (int i = 0; i < (N - 1); ++i)
+    for (int i = 0; i < N ; ++i)
     {
-        for (int j = 0; j < N - 1 - i; ++j )
+        for (int j = i; j < N; ++j )
         {
-            if (a[j] > a[j+1])
+            if (a[i] > a[j])
             {
-                temp = a[j+1];
-                a[j+1] = a[j];
-                a[j] = temp;
+                temp = a[j];
+                a[j] = a[i];
+                a[i] = temp;
             }
         }
     }
